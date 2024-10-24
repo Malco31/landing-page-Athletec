@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #ff5733;
+  --secondary-color: #333;
+  --tertiary-color: white;
+  --font-family: 'Roboto', sans-serif;
+  --header-height: 60px;
+  --header-width: 100%;
+  --nav-links: black;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+  }
+  
+/* --------------Home Section---------------- */
+
+nav {
+    top: 0;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px #333;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border: 1px solid #333;
+    box-shadow: 2px 2px 4px black;
+}
+
+nav img {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--nav-links);
+    padding: 1vw;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #333;
+    color: white;
+    transition: 0.8s ease;
+}
+
+section {
+    height: 100vh;
+}
+
+#home {
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    background-image: url('static/image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 70vh;
+    margin-left: -10vw;
+    max-width: 30%;
+    max-height: fit-content;
+}
+
+h2 {
+    color: var(--tertiary-color);
+    font-size: 2.5vw;
+    text-shadow: 1px 1px 2px black;
+  }
+
+
+#home div a {
+    color: white;
+    font-size: 1.3vw;
+    background-color: #333;
+    margin: 10px 0; /* Space above and below the button */
+    padding: 2vw 2vw; /* Add padding for button size */
+    max-width: 200px; /* Set width to make it square */
+    max-height: 100px; /* Set height to make it square */
+    display: flex; /* Use flexbox for center alignment */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    border: 2px solid #333;
+    transition: 0.8s ease;
+    box-shadow: 2px 2px 4px black;
+}
+
+#home div a:hover {
+    background-color: transparent;
+    
+}
+
+/* --------------About Section---------------- */
+  
+#about {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 2px solid #333;
+}
+
+#about h2 {
+    text-decoration: underline;
+    color: #333;
+    margin: 20px 0;
+    font-size: 3vw;
+}
+
+.about-content {
+    max-width: 1200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-columns {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+
+}
+
+.about-left, .about-right {
+    flex: 1; /* Each column will take equal space */
+    padding: 20px; /* Padding for content spacing */
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.about-left {
+    border-right: 1px solid #ccc; /* Optional: add a separator */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-left h3 {
+    font-size: 2vw;
+    margin: 20px 0;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.about-left p {
+    font-size: 1.8vw;
+}
+
+.about-right img{
+    width: 300px;
+}
+
+
+/* --------------Service Section---------------- */
+#services {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#services h2 {
+    text-decoration: underline;
+    color: #333;
+    margin: 10px 0;
+    font-size: 3vw;
+}
+
+.services-content {
+    max-width: 1200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services-columns {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100vw;
+
+}
+
+.services-left, .services-right {
+    flex: 1; /* Each column will take equal space */
+    padding: 20px; /* Padding for content spacing */
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+}
+
+.services-left {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #ccc;
+    width: 20vw;
+    height: 18vw;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px black;
+}
+
+.service-card img {
+    width: 12vw;
+}
+
+.services-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.services-right h3 {
+    font-size: 2vw;
+    margin: 20px 0;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.services-right p {
+    font-size: 1.8vw;
+    margin: 20px 0;
+}
+
+.services-right a {
+    color: white;
+    font-size: 1.5vw;
+    background-color: #333;
+    margin: 10px 0; /* Space above and below the button */
+    padding: 2vw 2vw; /* Add padding for button size */
+    max-width: 200px; /* Set width to make it square */
+    max-height: 100px; /* Set height to make it square */
+    display: flex; /* Use flexbox for center alignment */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    border: 2px solid #333;
+    transition: 0.8s ease;
+    box-shadow: 2px 2px 4px black;
+}
+
+.services-right a:hover {
+    color: #333;
+    background-color: transparent;
+}
+
+/* --------------Pricing Section---------------- */
+
+#pricing {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.pricing-content {
+    max-width: 1200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pricing h2 {
+    text-decoration: underline;
+    color: #333;
+    margin: 10px 0;
+    font-size: 3vw;
+}
+
+.pricing-card-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-card {
+    background-color: #ccc;
+    width: 20vw;
+    height: 30vw;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 20px;
+}
+
+.pricing-card h3 {
+    color: white;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 20px;
+}
+
+.pricing-card h1 {
+    color: white;
+    font-size: 4.5vw;
+    margin: 20px 0;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px #333;
+}
+
+.pricing-card ul {
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-card ul li {
+    font-size: 1.2vw;
+    max-width: 80%;
+}
+
+/* --------------Pricing Section---------------- */
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.testimonial-content {
+    max-width: 1200px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#testimonials h2 {
+    text-decoration: underline;
+    color: #333;
+    margin: 10px 0;
+    font-size: 3vw;
+}
+
+.testimonial-card-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-card {
+    background-color: #ccc;
+    width: 30vw;
+    height: 25vw;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 20px;
+}
+
+.testimonial-card p {
+    font-size: 1.8vw;
+    margin: 20px 0;
+}
+
+.review {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+
+}
+
+.review-profile {
+    background-color: #333;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2vw;
+}
+
+.review-profile img {
+    width: 70%;
+    height: 70%;
+}
+
+.review-profile i {
+    font-size: 4vw;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    width: 100vw;
+    height: fit-content;
+}
+
+/*----------------------- Responsive styles ------------------------*/
+@media (max-width: 768px) {
+    .about-columns {
+        flex-direction: column; /* Stack columns on small screens */
+    }
+
+    .about-left, .about-right {
+        border-right: none; /* Remove separator on small screens */
+        border-bottom: 1px solid #ccc; /* Add bottom separator */
+    }
+}
+
+    
+
+
