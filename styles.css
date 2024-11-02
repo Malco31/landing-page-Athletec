@@ -162,6 +162,25 @@ nav .links-container .signup-btn:hover {
 
 /* Responsive Styles */
 
+@media(max-width: 768px) {
+
+    .home-content {
+        top: -120px;
+    }
+
+    .home-content h2 {
+        font-size: 1.4em;
+        width: 200px;
+      }
+    
+    .home-content a {
+        font-size: 1em;
+        width: 100px;
+        height: 50px;
+        padding: 10px 10px; 
+    }
+}
+
 @media(max-width: 450px){
 
     nav .home-link h2 {
@@ -213,7 +232,7 @@ nav .links-container .signup-btn:hover {
     }
 
     .home-content {
-        top: -70px;
+        top: -150px;
     }
 
     .home-content h2 {
@@ -229,7 +248,6 @@ nav .links-container .signup-btn:hover {
     }
 
 }
-
 
 /* --------------About Section---------------- */
   
@@ -275,9 +293,10 @@ nav .links-container .signup-btn:hover {
 
 .about-left {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
     flex-direction: column;
-    margin: 20px;
+    align-items: center;
 }
 
 .about-left h3 {
@@ -289,7 +308,7 @@ nav .links-container .signup-btn:hover {
 
 .about-left p {
     font-size: 1.8em;
-    text-align: center;
+    text-align: left;
 }
 
 .about-right img{
@@ -301,7 +320,43 @@ nav .links-container .signup-btn:hover {
 
 /* Responsive Styles */
 
-@media (max-width: 768px) {
+@media(min-width: 1080px) {
+
+    #about {
+        align-items: center;
+    }
+
+    #about h2 {
+        font-size: 3em; 
+        padding: 10px;
+    }
+
+    .about-left h3 {
+        font-size: 2em; 
+        margin: 10px 0;
+    }
+
+    .about-left p {
+        font-size: 1.4em; 
+        text-align: center;
+        max-width: 80%; 
+        line-height: 1.5; 
+    }
+
+    .about-right img {
+        max-width: 450px; 
+        width: 100%;
+    }
+
+    .about-content {
+        max-width: 1000px; 
+    }
+}
+
+@media (max-width: 940px) {
+    .about-content {
+        align-items: center;
+    }
  
     .about-columns {
         flex-direction: column; 
@@ -310,21 +365,56 @@ nav .links-container .signup-btn:hover {
     }
 
     .about-left, .about-right {
-        border-right: none; 
+        align-items: center;
+    }
+
+    .about-left {
         width: 100%;
-    }
-
-    #about h2 {
-        font-size: 6vw;
-    }
-
-    .about-left h3 {
-        font-size: 4vw;
+        justify-content: center;
+        align-items: center;
     }
 
     .about-left p {
-        font-size: 3vw;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .about-content {
+        align-items: center;
+    }
+ 
+    .about-columns {
+        flex-direction: column; 
+        width: 100%;
+        align-items: center;
+    }
+
+    .about-left, .about-right {
+        align-items: center;
+    }
+
+    .about-left {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #about h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    .about-left h3 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .about-left p {
+        font-size: 1.4em;
+        text-align: center;
+        width: 100%;
     }
     
 }
@@ -334,10 +424,12 @@ nav .links-container .signup-btn:hover {
     #about h2 {
         font-size: 2em;
         margin: 0;
-    }
+    } 
 
     .about-left {
         width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .about-left h3 {
@@ -346,7 +438,7 @@ nav .links-container .signup-btn:hover {
 
     .about-left p {
         font-size: 1em;
-        text-align: left;
+        text-align: center;
     }
 
     .about-right {
@@ -483,13 +575,58 @@ nav .links-container .signup-btn:hover {
 
 /* Responsive Styles */
 
+@media(min-width: 1080px) {
+
+    #services {
+        align-items: center;
+    }
+
+    #services h2 {
+        font-size: 2.5em; 
+        margin: 20px 0;
+    }
+
+    .services-content {
+        max-width: 1000px; 
+    }
+
+    .service-card-container p {
+        font-size: 1.5em; 
+    }
+
+    .service-card {
+        width: 180px; 
+        height: 180px;
+        margin: 10px;
+    }
+
+    .service-card img {
+        width: 70%; 
+    }
+
+    .services-right h3 {
+        font-size: 2em; 
+    }
+
+    .services-right p {
+        font-size: 1.5em; 
+        width: 60%; 
+    }
+
+    .services-right a {
+        font-size: 1.3em; 
+        max-width: 180px; 
+        padding: 15px 20px;
+    }
+}
+
 @media (max-width: 768px) {
     .services-content {
         flex-wrap: wrap;
     }
 
     #services h2 {
-        font-size: 6vw;
+        font-size: 3em;
     }
 
     .services-columns {
@@ -511,16 +648,17 @@ nav .links-container .signup-btn:hover {
     }
 
     .services-right h3 {
-        font-size: 6vw;
+        font-size: 2em;
+        text-align: center;
         margin: 0;
     }
     
     .services-right p {
-        font-size: 4vw;
+        font-size: 1.5em;
     }
 
     .services-right a {
-        font-size: 4vw;
+        font-size: 1.5em;
     }
 }
 
@@ -573,7 +711,7 @@ nav .links-container .signup-btn:hover {
     
     .services-right p {
         font-size: 1em;
-        text-align: left;
+        text-align: center;
         width: 100%;
     }
 
@@ -654,13 +792,54 @@ nav .links-container .signup-btn:hover {
 
 /* Responsive Styles */
 
+@media(min-width: 1080px) {
+
+    #pricing {
+        align-items: center;
+    }
+
+    #pricing h2 {
+        font-size: 3em; 
+        margin: 20px 0;
+    }
+
+    .pricing-content {
+        max-width: 1000px; 
+    }
+
+    .pricing-card-container {
+        gap: 20px; 
+    }
+
+    .pricing-card {
+        max-width: 250px; 
+        max-height: 350px; 
+        margin: 20px; 
+        padding: 20px; 
+    }
+
+    .pricing-card h3 {
+        font-size: 1.2em; 
+        padding: 15px; 
+    }
+
+    .pricing-card h1 {
+        font-size: 3em; 
+        margin: 15px 0;
+    }
+
+    .pricing-card ul li {
+        font-size: 1em; 
+    }
+}
+
 @media (max-width: 768px) {
     #pricing {
         height: fit-content;
     }
 
     #pricing h2 {
-        font-size: 6vw;
+        font-size: 3em;
     }
 
     .pricing-content {
@@ -672,21 +851,21 @@ nav .links-container .signup-btn:hover {
     }
 
     .pricing-card {
-        width: 60vw;
+        width: 400px;
         height: fit-content;
     }
 
     .pricing-card h3 {
-        font-size: 5vw;
+        font-size: 1.2em;
         text-align: center;
     }
 
     .pricing-card h1 {
-        font-size: 8vw;
+        font-size: 3em;
     }
 
     .pricing-card ul li {
-        font-size: 4vw;
+        font-size: 1em;
     }
 }
 
@@ -808,10 +987,53 @@ nav .links-container .signup-btn:hover {
 
 /* Responsive Styles */
 
+@media(min-width: 1080px) {
+
+    #testimonials {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #testimonials h2 {
+        font-size: 3em; 
+        margin: 20px 0;
+    }
+
+    .testimonial-content {
+        max-width: 1000px; 
+    }
+
+    .testimonial-card {
+        max-width: 400px; 
+        max-height: 350px; 
+        margin: 20px; 
+    }
+
+    .testimonial-card p {
+        font-size: 1.4em; 
+        padding: 0 30px; 
+    }
+
+    .review-profile {
+        width: 80px; 
+        height: 80px;
+        margin: 20px;
+    }
+
+    .review-profile img {
+        width: 60%; 
+        height: 60%;
+    }
+
+    .review i {
+        font-size: 2.5em; 
+    }
+}
+
 @media (max-width: 768px) {
 
     #testimonials h2 {
-        font-size: 6vw;
+        font-size: 3em;
     }
 
     .testimonials-content {
@@ -824,22 +1046,22 @@ nav .links-container .signup-btn:hover {
     }
 
     .testimonial-card {
-        width: 60vw;
+        width: 400px;
         height: fit-content;
     }
 
     .testimonial-card p {
-        font-size: 4vw;
+        font-size: 1.5em;
         padding: 10px;
     }
 
     .review-profile {
-        width: 10vw;
-        height: 10vw;
+        width: 100px;
+        height: 100px;
     }
 
     .review i {
-        font-size: 6vw;
+        font-size: 2.5em;
     }
 }
 
