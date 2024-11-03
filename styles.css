@@ -66,8 +66,12 @@ nav .home-link img {
     justify-content: flex-end;
 }
 
+.links-container .links {
+    display: flex;
+    flex-direction: row;
+}
+
 nav .links-container a {
-    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,6 +123,7 @@ nav .links-container .signup-btn:hover {
     background-image: url('static/image.png');
     background-size: cover;
     background-repeat: no-repeat;
+    margin-bottom: 40px;
 }
 
 .home-content {
@@ -133,7 +138,7 @@ nav .links-container .signup-btn:hover {
 
 .home-content h2 {
     color: var(--tertiary-color);
-    font-size: 2.5vw;
+    font-size: 2em;
     text-shadow: 1px 1px 2px var(--primary-color);
   }
 
@@ -189,9 +194,11 @@ nav .links-container .signup-btn:hover {
 
     .links-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: flex-start;
         position: fixed;
         top: 0;
+        gap: 10px;
         right: -100%;
         z-index: 100;
         width: 300px;
@@ -199,11 +206,18 @@ nav .links-container .signup-btn:hover {
         transition: all 0.8s ease;
     }
 
+    .links-container .links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        gap: 40px;
+    }
+
     .links-container a {
         box-sizing: border-box;
-        height: auto;
         margin: 0;
-        width: 100%;
         padding: 0;
         justify-content: flex-start;
     }
@@ -214,10 +228,15 @@ nav .links-container .signup-btn:hover {
         display: block;
     }
 
+    .close-sidebar-button {
+        position: relative;
+        left: -120px;
+    }
+
     .open-sidebar-button i, .close-sidebar-button i {
         padding: 10px;
         display: block;
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     #sidebar-active:checked ~ .links-container {
@@ -256,6 +275,7 @@ nav .links-container .signup-btn:hover {
     flex-direction: column;
     padding: 20px;
     height: fit-content;
+    margin-bottom: 40px;
     /* border-bottom: 2px solid #333; */
 }
 
@@ -327,20 +347,20 @@ nav .links-container .signup-btn:hover {
     }
 
     #about h2 {
-        font-size: 3em; 
+        font-size: 2.5em; 
         padding: 10px;
     }
 
     .about-left h3 {
-        font-size: 2em; 
+        font-size: 1.5em; 
         margin: 10px 0;
     }
 
     .about-left p {
-        font-size: 1.4em; 
-        text-align: center;
+        font-size: 1.2em; 
+        text-align: left;
         max-width: 80%; 
-        line-height: 1.5; 
+        line-height: 1.8; 
     }
 
     .about-right img {
@@ -460,6 +480,7 @@ nav .links-container .signup-btn:hover {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    margin-bottom: 40px;
 }
 
 
@@ -591,7 +612,7 @@ nav .links-container .signup-btn:hover {
     }
 
     .service-card-container p {
-        font-size: 1.5em; 
+        font-size: 1.2em; 
     }
 
     .service-card {
@@ -605,16 +626,16 @@ nav .links-container .signup-btn:hover {
     }
 
     .services-right h3 {
-        font-size: 2em; 
+        font-size: 1.5em; 
     }
 
     .services-right p {
-        font-size: 1.5em; 
+        font-size: 1.2em; 
         width: 60%; 
     }
 
     .services-right a {
-        font-size: 1.3em; 
+        font-size: 1.1em; 
         max-width: 180px; 
         padding: 15px 20px;
     }
@@ -729,6 +750,7 @@ nav .links-container .signup-btn:hover {
     flex-direction: column;
     padding: 20px;
     height: fit-content;
+    margin-bottom: 40px;
 }
 
 .pricing-content {
@@ -799,7 +821,7 @@ nav .links-container .signup-btn:hover {
     }
 
     #pricing h2 {
-        font-size: 3em; 
+        font-size: 2.5em; 
         margin: 20px 0;
     }
 
@@ -820,11 +842,11 @@ nav .links-container .signup-btn:hover {
 
     .pricing-card h3 {
         font-size: 1.2em; 
-        padding: 15px; 
+        padding: 10px; 
     }
 
     .pricing-card h1 {
-        font-size: 3em; 
+        font-size: 2.5em; 
         margin: 15px 0;
     }
 
@@ -912,6 +934,7 @@ nav .links-container .signup-btn:hover {
     flex-direction: column;
     padding: 20px;
     height: fit-content;
+    margin-bottom: 40px;
 }
 
 .testimonial-content {
@@ -995,7 +1018,7 @@ nav .links-container .signup-btn:hover {
     }
 
     #testimonials h2 {
-        font-size: 3em; 
+        font-size: 2.5em; 
         margin: 20px 0;
     }
 
@@ -1004,13 +1027,13 @@ nav .links-container .signup-btn:hover {
     }
 
     .testimonial-card {
-        max-width: 400px; 
-        max-height: 350px; 
+        max-width: 350px; 
+        max-height: 300px; 
         margin: 20px; 
     }
 
     .testimonial-card p {
-        font-size: 1.4em; 
+        font-size: 1.2em; 
         padding: 0 30px; 
     }
 
@@ -1026,7 +1049,7 @@ nav .links-container .signup-btn:hover {
     }
 
     .review i {
-        font-size: 2.5em; 
+        font-size: 2em; 
     }
 }
 
